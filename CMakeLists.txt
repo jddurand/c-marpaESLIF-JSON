@@ -8,7 +8,7 @@ MYPACKAGESTART (marpaESLIF_JSON 1 0 0)
 # Library #
 ###########
 MYPACKAGELIBRARY(
-  ${CMAKE_CURRENT_SOURCE_DIR}/include/config.h.in
+  ${CMAKE_CURRENT_SOURCE_DIR}/include/marpaESLIF_JSON/internal/config.h.in
   ${INCLUDE_OUTPUT_PATH}/marpaESLIF_JSON/internal/config.h
   src/marpaESLIF_JSON.c)
 
@@ -28,7 +28,7 @@ MYPACKAGEDEPENDENCY (marpaESLIF    "${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/github/
 #########
 # Tests #
 #########
-MYPACKAGECHECK(marpaESLIFJSONTester)
+MYPACKAGECHECK(marpaESLIF_JSONTester)
 
 ###########
 # Install #

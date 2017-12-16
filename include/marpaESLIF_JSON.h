@@ -15,7 +15,7 @@ typedef struct marpaESLIF_JSONOption {
   short            infb;                /* Support of [+-]infinity or [+-]inf, case insensitive. Default: false */
   short            nanb;                /* Support of [+-]nan, case insensitive. Default: false */
   short            cntrlb;              /* Support of Unicode's control characters (range [\x00-\x1F]). Default: false */
-  short            disallow_dupkeys;    /* Dot not allow duplicate key in an object. Default: false */
+  short            disallow_dupkeysb;   /* Dot not allow duplicate key in an object. Default: false */
 } marpaESLIF_JSONOption_t;
 
 typedef struct marpaESLIF_JSON marpaESLIF_JSON_t; /* Opaque context */
@@ -24,7 +24,9 @@ typedef struct marpaESLIF_JSON marpaESLIF_JSON_t; /* Opaque context */
 extern "C" {
 #endif
   marpaESLIF_JSON_EXPORT marpaESLIF_JSON_t *marpaESLIF_JSON_newp(marpaESLIF_JSONOption_t *marpaESLIF_JSONOptionp);
+  marpaESLIF_JSON_EXPORT marpaESLIF_JSON_t *marpaESLIF_JSON_new_globalp(marpaESLIF_JSONOption_t *marpaESLIF_JSONOptionp);
   marpaESLIF_JSON_EXPORT void               marpaESLIF_JSON_freev(marpaESLIF_JSON_t *marpaESLIF_JSONp);
+  marpaESLIF_JSON_EXPORT void               marpaESLIF_JSON_free_globalv(marpaESLIF_JSON_t *marpaESLIF_JSONp);
 #ifdef __cplusplus
 }
 #endif
